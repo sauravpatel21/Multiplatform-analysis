@@ -16,8 +16,6 @@ numpy
 reportlab
 streamlit-extras
 
-Depending on the type of database you are using, you may need to install additional drivers:
-
 MySQL:
 Install the MySQL driver: pip install pymysql
 
