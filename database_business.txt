@@ -1,0 +1,64 @@
+-- Create the database
+CREATE DATABASE IF NOT EXISTS business_analytics;
+USE business_analytics;
+
+-- Create the 'orders' table
+CREATE TABLE IF NOT EXISTS orders (
+    order_id INT PRIMARY KEY,
+    order_date DATE,
+    customer_id INT,
+    product_id INT,
+    quantity INT,
+    revenue DECIMAL(10, 2),
+    profit DECIMAL(10, 2),
+    region VARCHAR(50)
+);
+
+-- Create the 'customers' table
+CREATE TABLE IF NOT EXISTS customers (
+    customer_id INT PRIMARY KEY,
+    customer_name VARCHAR(100),
+    age INT,
+    region VARCHAR(50)
+);
+
+-- Create the 'products' table
+CREATE TABLE IF NOT EXISTS products (
+    product_id INT PRIMARY KEY,
+    product_name VARCHAR(100),
+    product_category VARCHAR(100),
+    stock_level INT
+);
+
+-- Insert sample data into the 'orders' table
+INSERT INTO orders (order_id, order_date, customer_id, product_id, quantity, revenue, profit, region) VALUES
+(1, '2025-01-01', 101, 1, 2, 100.00, 20.00, 'North'),
+(2, '2025-01-15', 102, 2, 1, 50.00, 10.00, 'South'),
+(3, '2025-01-30', 103, 3, 3, 150.00, 30.00, 'East'),
+(4, '2025-02-04', 104, 1, 1, 50.00, 10.00, 'West'),
+(5, '2025-02-10', 105, 2, 2, 100.00, 20.00, 'North'),
+(6, '2025-02-27', 101, 3, 1, 50.00, 10.00, 'North'),
+(7, '2025-03-07', 102, 1, 3, 150.00, 30.00, 'South'),
+(8, '2025-03-18', 103, 2, 2, 100.00, 20.00, 'East'),
+(9, '2025-03-20', 104, 3, 1, 50.00, 10.00, 'West'),
+(10, '2025-03-26', 105, 1, 2, 100.00, 20.00, 'North'),
+(11, '2025-03-31', 102, 2, 1, 50.00, 10.00, 'South'),
+(12, '2025-04-01', 106, 2, 2, 100.00, 20.00, 'East'),
+(13, '2025-04-02', 101, 4, 2, 100.00, 20.00, 'North');
+
+-- Insert sample data into the 'customers' table
+INSERT INTO customers (customer_id, customer_name, age, region) VALUES
+(101, 'Harshit', 30, 'North'),
+(102, 'Saurav', 25, 'South'),
+(103, 'Tirth', 35, 'East'),
+(104, 'Rahul', 40, 'West'),
+(105, 'Smit', 28, 'North'),
+(106, 'Ansh', 32, 'East');
+
+-- Insert sample data into the 'products' table
+INSERT INTO products (product_id, product_name, product_category, stock_level) VALUES
+(1, 'Laptop', 'Electronics', 10),
+(2, 'Smartphone', 'Electronics', 20),
+(3, 'Headphones', 'Electronics', 15),
+(4, 'Tablet', 'Electronics', 5),
+(5, 'Monitor', 'Electronics', 8);

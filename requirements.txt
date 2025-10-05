@@ -1,0 +1,32 @@
+streamlit
+pandas
+plotly
+google-api-python-client
+fpdf2
+python-dotenv
+sqlalchemy
+matplotlib
+seaborn
+pdfplumber
+wordcloud
+requests
+folium
+streamlit-folium
+numpy
+reportlab
+streamlit-extras
+
+Additional Requirements for Database Connectivity
+Depending on the type of database you are using, you may need to install additional drivers:
+
+MySQL:
+Install the MySQL driver: pip install pymysql
+
+PostgreSQL:
+Install the PostgreSQL driver: pip install psycopg2-binary
+
+SQLite:
+No additional driver is needed, as SQLite support is built into Python.
+
+
+pip install -r requirements.txt
