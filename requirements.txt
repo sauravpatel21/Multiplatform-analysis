@@ -1,3 +1,4 @@
+# Core packages
 streamlit
 pandas
 plotly
@@ -16,14 +17,7 @@ numpy
 reportlab
 streamlit-extras
 
-MySQL:
-Install the MySQL driver: pip install pymysql
-
-PostgreSQL:
-Install the PostgreSQL driver: pip install psycopg2-binary
-
-SQLite:
-No additional driver is needed, as SQLite support is built into Python.
-
-
-pip install -r requirements.txt
+# Database drivers
+pymysql           # For MySQL
+psycopg2-binary   # For PostgreSQL
+# SQLite is built-in, no extra package needed
