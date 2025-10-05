@@ -16,7 +16,6 @@ numpy
 reportlab
 streamlit-extras
 
-Additional Requirements for Database Connectivity
 Depending on the type of database you are using, you may need to install additional drivers:
 
 MySQL:
